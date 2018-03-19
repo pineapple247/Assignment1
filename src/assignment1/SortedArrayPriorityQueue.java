@@ -14,7 +14,7 @@ package assignment1;
  * array of Object rather than of PriorityItem&lt;T&gt;, which would be natural.
  * Array elements accessed then have to be cast to PriorityItem&lt;T&gt; before
  * using their getItem() or getPriority() methods.
- * 
+ *
  * This is an example of Java's poor implementation getting in the way. Java
  * fanboys will no doubt explain at length why it has to be this way, but note
  * that Eiffel allows it because Eiffel generics were done right from the start,
