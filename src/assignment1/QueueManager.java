@@ -15,10 +15,15 @@ import java.util.Scanner;
  */
 public class QueueManager {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws QueueOverflowException, QueueUnderflowException
+    {
         PriorityQueue<Person> q;
+       
+        q = new UnsortedLinkedPriorityQueue<>();
+        
         Scanner stdin = new Scanner(System.in);
-
+        
+ 
         /* Welcome and prompt for implementation choices */
         System.out.println("Welcome to the Priority Queue manager.");
         System.out.println();
@@ -39,9 +44,21 @@ public class QueueManager {
                 System.out.println("Using a sorted array.");
                 break;
             case "ua":
+                q = new UnsortedArrayPriorityQueue<>(8);
+                System.out.println("Using unsorted array.");
+                break;
             case "sl":
+                q = new SortedLinkedPriorityQueue<>();
+                System.out.println("Using sorted linked priority queue.");
+                break;
             case "ul":
+                q = new UnsortedLinkedPriorityQueue<>();
+                System.out.println("Using unsorted linked priority queue.");
+                break;
             case "h":
+                q = new HeapPriorityQueue<>(8);
+                System.out.println("Using Heap.");
+                break;
             default:
                 q = new SortedArrayPriorityQueue<>(8);
                 System.out.println("Invalid choice, using sorted array.");
